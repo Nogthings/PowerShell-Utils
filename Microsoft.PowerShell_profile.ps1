@@ -97,6 +97,20 @@ Set-Alias -Name findtext -Value Find-TextInFiles
 
 <#
 .SYNOPSIS
+    A shortcut for 'git status -s -b' to show the current branch and modified/new files in a very compact form.
+.DESCRIPTION
+    This function runs 'git status -s -b' to provide a concise overview of the current Git branch and the status of files in the repository, showing only modified and new files.
+.EXAMPLE
+    g
+#>
+function Get-GitStatusShort {
+    git status -s -b
+}
+
+Set-Alias -Name g -Value Get-GitStatusShort
+
+<#
+.SYNOPSIS
     Lists all functions defined in the user's PowerShell profile along with their descriptions and usage.
 .DESCRIPTION
     This function retrieves all functions defined in the user's PowerShell profile script and displays their names, descriptions (from help), and usage.
